@@ -9,7 +9,36 @@ class HomeController extends Controller
     //
     public function index()
     {
-        echo "Index Function";
+        return view('home.index');
+
+    }
+
+    public function test()
+    {
+        return view('home.test');
+
+    }
+    public function param($id,$number)
+    {
+        //echo "Parameter 1:", $id;
+        //echo "<br>Parameter 2:", $number;
+        //echo "<br>Sum Parameters:", $id+$number;
+        return view('home.test2',
+        [
+            'id' => $id,
+            'number' => $number
+        ]);
+    }
+    public function save(Request $request)
+    {
+        echo "Save Function";
+        echo "First Name : ",$_REQUEST["fname"];
+        echo "Last Name :",$_REQUEST["lname"];
+        return view('home.test2',
+            [
+                'id' => $_REQUEST["fname"],
+                'number' => $_REQUEST["lname"]
+            ]);
 
     }
 }
