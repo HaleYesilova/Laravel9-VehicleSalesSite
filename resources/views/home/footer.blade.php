@@ -1,5 +1,5 @@
 <!-- Footer Section Begin -->
-<footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+<footer class="footer set-bg" data-setbg="{{asset('assets')}}/img/footer-bg.jpg">
     <div class="container">
         <div class="footer__contact">
             <div class="row">

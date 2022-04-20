@@ -27,7 +27,9 @@
 <body>
 <!-- Page Preloder -->
 <div id="preloder">
-    <div class="loader"></div>
+    <div class="loader">
+
+    </div>
 </div>
 @include("home.header")
 
@@ -37,7 +39,7 @@
 
 @yield('content')
 
-<@include("home.footer")
+@include("home.footer")
 @yield('foot')
 </body>
 </html>

@@ -7,7 +7,7 @@
         <a href="#" class="primary-btn">Add Car</a>
     </div>
     <div class="offcanvas__logo">
-        <a href="./index.html"><img src="{{asset('assets')}}/img/logo.png" alt=""></a>
+        <a href="{{asset('assets')}}/index.html"><img src="{{asset('assets')}}/img/logo.png" alt=""></a>
     </div>
     <div id="mobile-menu-wrap"></div>
     <ul class="offcanvas__widget__add">

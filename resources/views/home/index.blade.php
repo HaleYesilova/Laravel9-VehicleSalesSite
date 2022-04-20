@@ -3,7 +3,6 @@
 @section('title', 'Vehicle Sales Site Project')
 
 
-
 @section('content')
     <!-- Hero Section Begin -->
     <section class="hero spad set-bg" data-setbg="{{asset('assets')}}/img/hero-bg.jpg">
@@ -572,7 +571,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
-                        <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-1.jpg">
+                        <div class="latest__blog__item__pic set-bg" data-setbg="{{asset('assets')}}/img/latest-blog/lb-1.jpg">
                             <ul>
                                 <li>By Polly Williams</li>
                                 <li>Dec 19, 2018</li>
@@ -590,7 +589,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
-                        <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-2.jpg">
+                        <div class="latest__blog__item__pic set-bg" data-setbg="{{asset('assets')}}/img/latest-blog/lb-2.jpg">
                             <ul>
                                 <li>By Mattie Ramirez</li>
                                 <li>Dec 19, 2018</li>
@@ -608,7 +607,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="latest__blog__item">
-                        <div class="latest__blog__item__pic set-bg" data-setbg="img/latest-blog/lb-3.jpg">
+                        <div class="latest__blog__item__pic set-bg" data-setbg="{{asset('assets')}}/img/latest-blog/lb-3.jpg">
                             <ul>
                                 <li>By Nicholas Brewer</li>
                                 <li>Dec 19, 2018</li>
@@ -634,13 +633,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <div class="cta__item set-bg" data-setbg="img/cta/cta-1.jpg">
+                    <div class="cta__item set-bg" data-setbg="{{asset('assets')}}/img/cta/cta-1.jpg">
                         <h4>Do You Want To Buy A Car</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
-                    <div class="cta__item set-bg" data-setbg="img/cta/cta-2.jpg">
+                    <div class="cta__item set-bg" data-setbg="{{asset('assets')}}/img/cta/cta-2.jpg">
                         <h4>Do You Want To Rent A Car</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
                     </div>
