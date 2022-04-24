@@ -9,11 +9,12 @@
         <div class="content-wrapper">
             <h1>Category List</h1>
         </div>
+
+            <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Category List</h4>
-                <p class="card-description"> Add class <code>.table</code>
-                </p>
+
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -38,15 +39,17 @@
                             <td>{{$rs->description}}</td>
                             <th>{{$rs->image}}</th>
                             <th>{{$rs->status}}</th>
-                            <th><a href="/admin/category/edit{{$rs->id}}" class="btn btn-outline-primary btn-fw" >Edit</a> </th>
-                            <th><a href="/admin/category/delete{{$rs->id}}" class="btn btn-outline-primary btn-fw" >Delete</a> </th>
-                            <th><a href="/admin/category/show{{$rs->id}}" class="btn btn-outline-primary btn-fw" >Show</a> </th>
+                            <th><a href="/admin/category/edit/{{$rs->id}}" class="btn btn-outline-primary btn-fw" >Edit</a> </th>
+                            <th><a href="/admin/category/delete/{{$rs->id}}" class="btn btn-outline-warning btn-fw" >Delete</a> </th>
+                            <th><a href="/admin/category/show/{{$rs->id}}" class="btn btn-outline-info btn-fw" >Show</a> </th>
                         </tr>
                         @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
+        </div>
+
         </div>
         <!--  content-wrapper ends -->
 @endsection
