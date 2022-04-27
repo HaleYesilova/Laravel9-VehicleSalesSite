@@ -7,12 +7,13 @@
     <!-- partial -->
     <div class="main-panel">
         <div class="content-wrapper">
-            <h1>Category List</h1>
+            <a href="/admin/category/create" class="btn btn-outline-secondary btn-lg btn-block">Add Category</a>
         </div>
 
             <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
+
                 <h4 class="card-title">Category List</h4>
 
                 <div class="table-responsive">

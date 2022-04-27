@@ -58,86 +58,108 @@
         <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
         </li>
+        <!--  -->
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-cart"></i>
+              </span>
+                <span class="menu-title">Order</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/Order"> New Orders </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/Order"> Accepted Orders </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/Order"> Shipping Orders </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/Order"> Completed Orders </a></li>
+                </ul>
+            </div>
+        </li>
+        <!--
         <li class="nav-item menu-items">
             <a class="nav-link" href="../../index.html">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Idk</span>
             </a>
         </li>
+        -->
         <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" href="{{asset('assets')}}/admin/category">
               <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i>
+                <i class="mdi mdi-format-section"></i>
               </span>
-                <span class="menu-title">Basic UI Elements</span>
-                <i class="menu-arrow"></i>
+                <span class="menu-title">Categories</span>
             </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/buttons.html">Buttons</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-            </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{asset('assets')}}/admin/car">
               <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+                <i class="mdi mdi-car"></i>
               </span>
-                <span class="menu-title">Form Elements</span>
+                <span class="menu-title">Cars</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/tables/basic-table.html">
+            <a class="nav-link" href="{{asset('assets')}}/admin/comment">
               <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                <i class="mdi mdi-comment"></i>
               </span>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Comments</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/charts/chartjs.html">
+            <a class="nav-link" href="{{asset('assets')}}/admin/faq">
               <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
+                <i class="mdi mdi-account-question"></i>
               </span>
-                <span class="menu-title">Charts</span>
+                <span class="menu-title">FAQ</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{asset('assets')}}/admin/pages/icons/mdi.html">
+            <a class="nav-link" href="{{asset('assets')}}/admin/message">
+              <span class="menu-icon">
+                <i class="mdi mdi-message"></i>
+              </span>
+                <span class="menu-title">Messages</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{asset('assets')}}/admin/user">
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
-                <span class="menu-title">Icons</span>
+                <span class="menu-title">Users</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" href="{{asset('assets')}}/admin/brand">
               <span class="menu-icon">
-                <i class="mdi mdi-security"></i>
+                <i class="mdi mdi-car"></i>
               </span>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
+                <span class="menu-title">Brands</span>
             </a>
-            <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/blank-page.html"> Blank Page </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/error-404.html"> 404 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/error-500.html"> 500 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/login.html"> Login </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/register.html"> Register </a></li>
-                </ul>
-            </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+            <a class="nav-link" href="{{asset('assets')}}/admin/social">
               <span class="menu-icon">
-                <i class="mdi mdi-file-document-box"></i>
+                <i class="mdi mdi-globe-model"></i>
               </span>
-                <span class="menu-title">Documentation</span>
+                <span class="menu-title">Social</span>
+            </a>
+        </li>
+        <!--  -->
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{asset('assets')}}/admin/setting">
+              <span class="menu-icon">
+                <i class="mdi mdi-settings"></i>
+              </span>
+                <span class="menu-title">Settings</span>
+            </a>
+        </li>
+              </span>
             </a>
         </li>
     </ul>

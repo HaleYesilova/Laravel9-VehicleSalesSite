@@ -55,18 +55,15 @@
                             <div class ="card-footer">
                             <button type="submit" class="btn btn-primary mr-2">Update Data</button>
                             <button class="btn btn-dark">Cancel</button>
-                        </form>
+                                </form>
                 </div>
             </div>
                     </div>
                 </div>
-            </div>
+    </div>
+    </div>
 
 
-
-
-            </div>
-        </div>
         <!-- content-wrapper ends -->
 
 @endsection
