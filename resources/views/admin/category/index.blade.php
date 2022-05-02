@@ -41,8 +41,8 @@
                             <th>{{$rs->image}}</th>
                             <th>{{$rs->status}}</th>
                             <th><a href="/admin/category/edit/{{$rs->id}}" class="btn btn-outline-primary btn-fw" >Edit</a> </th>
-                            <th><a href="/admin/category/delete/{{$rs->id}}" class="btn btn-outline-warning btn-fw" >Delete</a> </th>
-                            <th><a href="/admin/category/show/{{$rs->id}}" class="btn btn-outline-info btn-fw" >Show</a> </th>
+                            <th><a href="/admin/category/delete/{{$rs->id}}" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger btn-fw" >Delete</a> </th>
+                            <th><a href="/admin/category/show/{{$rs->id}}" class="btn btn-outline-info btn-fw" >Show</a>  </th>
                         </tr>
                         @endforeach
                         </tbody>

@@ -11,7 +11,7 @@
             <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
-                    < class="card-body">
+                    <!--card body -->
                         <h4 class="card-title">Category Elements</h4>
                         <p class="card-description">  </p>
                         <form class="forms-sample" action="/admin/category/update/{{$data->id}}" method="post">
