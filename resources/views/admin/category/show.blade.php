@@ -15,10 +15,10 @@
                     <div class="row mb-2">
 
                 <div class="col-sm-3">
-                <a href="/admin/category/edit/{{$data->id}}" class="btn btn-inverse-info btn-fw">Edit</a>
+                <a href="{{route('admin.category.edit',['id'=>$data->id])}}" class="btn btn-inverse-info btn-fw">Edit</a>
             </div>
                     <div class="col-sm-3">
-                        <a href="/admin/category/delete/{{$data->id}}" onclick="return confirm('Are you sure?')" class="btn btn-inverse-danger btn-fw">Delete</a>
+                        <a href="{{route('admin.category.delete',['id'=>$data->id])}}" onclick="return confirm('Are you sure?')" class="btn btn-inverse-danger btn-fw">Delete</a>
                     </div>
 
                     </div>

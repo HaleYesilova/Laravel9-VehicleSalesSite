@@ -87,7 +87,7 @@
         </li>
         -->
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{asset('assets')}}/admin/category">
+            <a class="nav-link" href="{{ route("admin.category.index")}}">
               <span class="menu-icon">
                 <i class="mdi mdi-format-section"></i>
               </span>

@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Category Elements</h4>
                         <p class="card-description">  </p>
-                        <form class="forms-sample" action="/admin/category/store" method="post">
+                        <form class="forms-sample" action="{{route('admin.category.create')}}" method="post">
                             @csrf
 
                             <div class="form-group">

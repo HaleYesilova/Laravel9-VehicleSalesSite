@@ -7,7 +7,7 @@
     <!-- partial -->
     <div class="main-panel">
         <div class="content-wrapper">
-            <a href="/admin/category/create" class="btn btn-outline-secondary btn-lg btn-block">Add Category</a>
+            <a href="{{route('admin.category.create')}}" class="btn btn-outline-secondary btn-lg btn-block">Add Category</a>
         </div>
 
             <div class="col-lg-12 grid-margin stretch-card">
@@ -40,9 +40,9 @@
                             <td>{{$rs->description}}</td>
                             <th>{{$rs->image}}</th>
                             <th>{{$rs->status}}</th>
-                            <th><a href="/admin/category/edit/{{$rs->id}}" class="btn btn-outline-primary btn-fw" >Edit</a> </th>
-                            <th><a href="/admin/category/delete/{{$rs->id}}" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger btn-fw" >Delete</a> </th>
-                            <th><a href="/admin/category/show/{{$rs->id}}" class="btn btn-outline-info btn-fw" >Show</a>  </th>
+                            <th><a href="{{route('admin.category.edit',['id'=>$rs->id])}}"class="btn btn-outline-primary btn-fw" >Edit</a> </th>
+                            <th><a href="{{route('admin.category.delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger btn-fw" >Delete</a> </th>
+                            <th><a href="{{route('admin.category.show',['id'=>$rs->id])}}" class="btn btn-outline-info btn-fw" >Show</a>  </th>
                         </tr>
                         @endforeach
                         </tbody>

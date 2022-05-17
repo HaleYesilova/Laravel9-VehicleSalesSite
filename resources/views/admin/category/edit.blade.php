@@ -14,7 +14,7 @@
                     <!--card body -->
                         <h4 class="card-title">Category Elements</h4>
                         <p class="card-description">  </p>
-                        <form class="forms-sample" action="/admin/category/update/{{$data->id}}" method="post">
+                        <form class="forms-sample" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post">
                             @csrf
 
                             <div class="form-group">
