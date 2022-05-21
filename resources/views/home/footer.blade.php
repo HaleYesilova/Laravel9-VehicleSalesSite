@@ -37,7 +37,7 @@
                     <h5>Infomation</h5>
                     <ul>
                         <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i> Payemnt</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i> Payment</a></li>
                         <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
                         <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
                     </ul>
@@ -72,9 +72,9 @@
                 </div>
             </div>
         </div>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         <div class="footer__copyright__text">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+          <!--  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p> -->
         </div>
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
     </div>

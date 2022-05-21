@@ -14,7 +14,7 @@
                     <!--card body -->
                         <h4 class="card-title">Category Elements</h4>
                         <p class="card-description">  </p>
-                        <form class="forms-sample" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post">
+                        <form class="forms-sample" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
@@ -37,9 +37,6 @@
                                     <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="image">
                                         <label class="custom-file-label" for="exampleInputFile">Choose image file</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class = "input-group-text" id="">Upload</span>
                                     </div>
                                 </div>
                             </div>
