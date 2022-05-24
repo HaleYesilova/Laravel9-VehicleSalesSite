@@ -3,29 +3,13 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Photo;
+use App\Models\Car;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class CategoryController extends Controller
+class AdminCarController extends Controller
 {
-
-    protected $appends = [
-        'getParentsTree'
-    ];
-
-    public static function getParentsTree($category, $title)
-    {
-        if ($category->parent_id == 0)
-            {
-            return $title;
-            }
-
-        $parent = Category::find($category->parent_id);
-        $title  = $parent->title .'>'.$title;
-        return CategoryController::getParentsTree($parent,$title);
-    }
 
 
     /**
@@ -37,8 +21,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $data= Category::all();
-        return view('admin.category.index',
+        $data= Car::all();
+        return view('admin.car.index',
             ['data' => $data]);
     }
 
@@ -51,7 +35,7 @@ class CategoryController extends Controller
     {
         //
         $data= Category::all();
-        return view('admin.category.create',
+        return view('admin.car.create',
             ['data' => $data]
         );
 
@@ -67,46 +51,55 @@ class CategoryController extends Controller
     {
         //Validate the request
 
-        $data= new Category();
-        $data->parent_id = $request->parent_id;
+        $data= new Car();
+        $data->category_id = $request->category_id;
+        $data->user_id = 0; //$request->user_id;
+        $data->brand_id = 0; //$request->brand_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
+        $data->detail = $request->detail;
+        $data->price = $request->price;
+        $data->tax = $request->tax;
+        $data->fuel = $request->fuel;
+        $data->year = $request->year;
+        $data->KM = $request->KM;
+        $data->color = $request->color;
         $data->status = $request->status;
         if ($request->file('image')){
             $data->image= $request->file('image')->store('images');
         }
         $data->save();
-        return redirect('admin/category');
+        return redirect('admin/car');
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category $category
+     * @param  \App\Models\Car $car
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category, $id)
+    public function show(Car $car, $id)
     {
         //
-        $data= Category::find($id);
-        return view('admin.category.show',
+        $data= Car::find($id);
+        return view('admin.car.show',
             ['data' => $data]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Category $category
+     * @param  \App\Models\Car $car
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category, $id)
+    public function edit(Car $car, $id)
     {
         //
-        $data= Category::find($id);
+        $data= Car::find($id);
         $datalist= Category::all();
-        return view('admin.category.edit', [
+        return view('admin.car.edit', [
             'data' => $data,
             'datalist' => $datalist
             ]);
@@ -116,40 +109,50 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category $category
+     * @param  \App\Models\Car $car
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category,$id)
+    public function update(Request $request, Car $car,$id)
     {
         //
-        $data= Category::find($id);
-        $data->parent_id = $request->parent_id;
+        $data= Car::find($id);
+        $data->category_id = $request->category_id;
+        $data->user_id = 0; //$request->user_id;
+        $data->brand_id = 0; //$request->brand_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
+        $data->detail = $request->detail;
+        $data->price = $request->price;
+        $data->tax = $request->tax;
+        $data->fuel = $request->fuel;
+        $data->year = $request->year;
+        $data->KM = $request->KM;
+        $data->color = $request->color;
         $data->status = $request->status;
         if ($request->file('image')){
             $data->image= $request->file('image')->store('images');
         }
         $data->save();
-        return redirect('admin/category');
+        return redirect('admin/car');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Category $category
+     * @param  \App\Models\Car $car
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category  $category,$id)
+    public function destroy(Car  $car,$id)
     {
-        $data= Category::find($id);
-                if ($data->image && Storage::disk('public')->exists($data->image)) {
-                    Storage::delete($data->image);
-                }
+        //
+        $data= Car::find($id);
+        if ($data->image && Storage::disk('public')->exists($data->image)) {
+            Storage::delete($data->image);
+        }
 
         $data->delete();
-        return redirect('admin/category');
+        return redirect('admin/car');
     }
 
 }

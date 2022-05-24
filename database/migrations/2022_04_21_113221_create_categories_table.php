@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('parent_id');
-            $table->string('title');
-            $table->string('keywords')->nullable();
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
+            $table->text('title');
+            $table->text('keywords')->nullable();
+            $table->text('description')->nullable();
+            $table->text('image')->nullable();
             $table->string('status',6);
             $table->timestamps();
         });
