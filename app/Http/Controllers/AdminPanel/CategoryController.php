@@ -10,11 +10,30 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
+
+    protected $appends = [
+        'getParentsTree'
+    ];
+
+    public static function getParentsTree($category, $title)
+    {
+        if ($category->parent_id == 0)
+            {
+            return $title;
+            }
+
+        $parent = Category::find($category->parent_id);
+        $title  = $parent->title .'>'.$title;
+        return CategoryController::getParentsTree($parent,$title);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -31,7 +50,11 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('admin.category.create');
+        $data= Category::all();
+        return view('admin.category.create',
+            ['data' => $data]
+        );
+
     }
 
     /**
@@ -45,7 +68,7 @@ class CategoryController extends Controller
         //Validate the request
 
         $data= new Category();
-        $data->parent_id = 0;
+        $data->parent_id = $request->parent_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
@@ -82,10 +105,11 @@ class CategoryController extends Controller
     {
         //
         $data= Category::find($id);
-        return view('admin.category.edit',
-            ['data' => $data]);
-
-
+        $datalist= Category::all();
+        return view('admin.category.edit', [
+            'data' => $data,
+            'datalist' => $datalist
+            ]);
     }
 
     /**
@@ -99,7 +123,7 @@ class CategoryController extends Controller
     {
         //
         $data= Category::find($id);
-        $data->parent_id = 0;
+        $data->parent_id = $request->parent_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
@@ -125,4 +149,5 @@ class CategoryController extends Controller
         $data->delete();
         return redirect('admin/category');
     }
+
 }
