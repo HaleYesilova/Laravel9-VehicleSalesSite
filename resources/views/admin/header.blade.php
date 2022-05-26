@@ -16,7 +16,7 @@
             </ul>
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item dropdown d-none d-lg-block">
-                    <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
+                    <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#"></a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
                         <h6 class="p-3 mb-0">Projects</h6>
                         <div class="dropdown-divider"></div>
@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                             <div class="preview-item-content">
-                                <p class="preview-subject ellipsis mb-1">Software Development</p>
+                                <p class="preview-subject ellipsis mb-1"></p>
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="preview-item-content">
-                                <p class="preview-subject ellipsis mb-1">UI Development</p>
+                                <p class="preview-subject ellipsis mb-1"></p>
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="preview-item-content">
-                                <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                                <p class="preview-subject ellipsis mb-1"></p>
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>

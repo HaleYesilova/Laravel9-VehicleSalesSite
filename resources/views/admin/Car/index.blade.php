@@ -22,18 +22,19 @@
                             <tr>
                                 <th>id</th>
                                 <th>Category</th>
-                                <th>title</th>
-                                <th>price</th>
-                                <th>tax</th>
-                                <th>fuel</th>
-                                <th>year</th>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Tax</th>
+                                <th>Fuel</th>
+                                <th>Year</th>
                                 <th>KM</th>
-                                <th>color</th>
-                                <th>image</th>
-                                <th>status</th>
-                                <th>edit</th>
-                                <th>delete</th>
-                                <th>show</th>
+                                <th>Color</th>
+                                <th>Image</th>
+                                <th>Image gallery</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                                <th>Show</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -50,8 +51,14 @@
                                     <td>{{$rs->color}}</td>
                                     <th>
                                         @if ($rs->image)
-                                            <img src="{{Storage::url($rs->image)}}">
+                                            <img src="{{Storage::url($rs->image)}}" style = "height: 40px">
                                         @endif
+                                    </th>
+                                    <th>
+                                        <a href="{{route('admin.category.index',['cid'=>$rs->id])}}"
+                                           onclick="return !window.open(this.href, '', 'top=50 left = 100, width=1100 height=700')">
+                                        <img src="{{asset('assets')}}/admin/images/gallery.png" style = "height: 40px" >
+                                        </a>
                                     </th>
                                     <th>{{$rs->status}}</th>
                                     <th><a href="{{route('admin.category.edit',['id'=>$rs->id])}}"class="btn btn-outline-primary btn-fw" >Edit</a> </th>
