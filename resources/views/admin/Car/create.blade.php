@@ -1,8 +1,9 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Add Car')
-
-
+@section('head')
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+@endsection
 @section('content')
     <!-- partial -->
     <div class="main-panel">
@@ -17,11 +18,10 @@
                         <p class="card-description">  </p>
                         <form class="forms-sample" action="{{route('admin.car.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
-
                                 <div class = "form-group">
                                     <label>Parent Category</label>
                                     <select class ="form-control select2" name="category_id" style="...">
-                                        <option value = "0" selecte="selected">Main Car</option>
+                                        <option value = "0" select="selected">Main Car</option>
                                         @foreach($data as $rs)
                                             <option value="{{ $rs -> id }}"> {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs, $rs->title) }}</option>
                                         @endforeach
@@ -38,11 +38,6 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Keywords</label>
                                 <input type="text" class="form-control" name="keywords" placeholder="Keywords">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Detail Inf.</label>
-                                <textarea  class="form-control" name="detail" >
-                                </textarea>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Price</label>
@@ -66,7 +61,23 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Color</label>
-                                <input type="text" class="form-control" name="Color"placeholder="color">
+                                <input type="text" class="form-control" name="Color" placeholder="color">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Detail Inf.</label>
+                                <textarea  class="form-control" id="detail" name="detail" >
+
+                                </textarea>
+                                <script>
+                                    ClassicEditor
+                                        .create( document.querySelector( '#detail' ) )
+                                        .then( editor => {
+                                            console.log( editor );
+                                        } )
+                                        .catch( error => {
+                                            console.error( error );
+                                        } );
+                                </script>
                             </div>
 
                             <div class="form-group">
@@ -82,13 +93,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Status</label>
-                                <select class="form-control" name="status">
-                                    <option>True</option>
-                                    <option>False</option>
-                                </select>
-                            </div>
+
 
                             <button type="submit" class="btn btn-primary mr-2">Save</button>
                             <button class="btn btn-dark">Cancel</button>

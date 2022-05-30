@@ -95,7 +95,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{asset('assets')}}/admin/car">
+            <a class="nav-link" href="/admin/car">
               <span class="menu-icon">
                 <i class="mdi mdi-car"></i>
               </span>
