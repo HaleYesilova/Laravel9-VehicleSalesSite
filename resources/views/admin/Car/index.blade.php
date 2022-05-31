@@ -20,7 +20,7 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>id</th>
+                                <th>Id</th>
                                 <th>Category</th>
                                 <th>Title</th>
                                 <th>Price</th>
@@ -41,7 +41,7 @@
                             @foreach($data as $rs)
                                 <tr>
                                     <td>{{$rs->id}}</td>
-                                    <td> {{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category, $rs->category->title) }} </td>
+                                    <td>{{ \App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category, $rs->category->title) }} </td>
                                     <td>{{$rs->title}}</td>
                                     <td>{{$rs->price}}</td>
                                     <td>{{$rs->tax}}</td>
@@ -57,7 +57,7 @@
                                     <th>
                                         <a href="{{route('admin.category.index',['cid'=>$rs->id])}}"
                                            onclick="return !window.open(this.href, '', 'top=50 left = 100, width=1100 height=700')">
-                                        <img src="{{asset('assets')}}/admin/images/gallery.png" style = "height: 40px" >
+                                        <img src="{{asset('assets')}}/admin/images/gallery.png" style = "height: 40px">
                                         </a>
                                     </th>
                                     <th>{{$rs->status}}</th>

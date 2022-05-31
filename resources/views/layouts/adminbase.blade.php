@@ -27,8 +27,13 @@
     <div class="container-fluid page-body-wrapper">
         @include("admin.header")
 
+        @section('sidebar')
+            @include("admin.sidebar")
+        @show
+
 
         @yield('content')
+
         @include("admin.footer")
         @yield('foot')
     </div>

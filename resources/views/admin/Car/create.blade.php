@@ -39,6 +39,7 @@
                                 <label for="exampleInputEmail1">Keywords</label>
                                 <input type="text" class="form-control" name="keywords" placeholder="Keywords">
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Price</label>
                                 <input type="number" class="form-control" name="price" value="0">
@@ -93,7 +94,13 @@
                                 </div>
                             </div>
 
-
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select class="form-control" name="status">
+                                    <option>True</option>
+                                    <option>False</option>
+                                </select>
+                            </div>
 
                             <button type="submit" class="btn btn-primary mr-2">Save</button>
                             <button class="btn btn-dark">Cancel</button>

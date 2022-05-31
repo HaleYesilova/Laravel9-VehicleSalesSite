@@ -80,7 +80,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
         //********************ADMIN CAR IMAGE GALLERY ROUTES***********************
         Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
             Route::get('/{cid}',  'index')->name('index');
-            Route::post('/store/{cid} ', 'store')->name('store');
+            Route::post('/store/{cid}', 'store')->name('store');
             Route::get('/delete/{cid}/{id}', 'delete')->name('delete');
 
         });

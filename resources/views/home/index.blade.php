@@ -2,6 +2,10 @@
 
 @section('title', 'Vehicle Sales Site Project')
 
+@section('slider')
+   @include('home.slider')
+@endsection
+
 
 @section('content')
     <!-- Hero Section Begin -->
