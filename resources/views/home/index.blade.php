@@ -6,9 +6,9 @@
    @include('home.slider')
 @endsection
 
-
 @section('content')
     <!-- Hero Section Begin -->
+
     <section class="hero spad set-bg" data-setbg="{{asset('assets')}}/img/hero-bg.jpg">
         <div class="container">
             <div class="row">
@@ -20,6 +20,7 @@
                         </div>
                         <div class="hero__text__price">
                             <div class="car-model">Model 2019</div>
+
                             <h2>$399<span>/Month</span></h2>
                         </div>
                         <a href="#" class="primary-btn"><img src="{{asset('assets')}}/img/wheel.png" alt=""> Test Drive</a>
