@@ -20,7 +20,6 @@
                         </div>
                         <div class="hero__text__price">
                             <div class="car-model">Model 2019</div>
-
                             <h2>$399<span>/Month</span></h2>
                         </div>
                         <a href="#" class="primary-btn"><img src="{{asset('assets')}}/img/wheel.png" alt=""> Test Drive</a>
@@ -97,7 +96,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="site-btn">Searching</button>
+                                        <button type="submit" class="site-btn">Search</button>
                                     </form>
                                 </div>
                             </div>
@@ -160,7 +159,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="site-btn">Searching</button>
+                                        <button type="submit" class="site-btn">Search</button>
                                     </form>
                                 </div>
                             </div>

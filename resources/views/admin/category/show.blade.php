@@ -36,8 +36,6 @@
                         <tr>
                             <th>title</th>
                             <td>{{$data->title}}</td>
-
-
                         </tr>
                         <tr>
                             <th>Keywords</th>

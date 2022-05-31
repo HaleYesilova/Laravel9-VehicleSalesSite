@@ -12,7 +12,7 @@
     <div id="mobile-menu-wrap"></div>
     <ul class="offcanvas__widget__add">
         <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
-        <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+        <li><i class="fa fa-envelope-o"></i> Info.vehiclesale@gmail.com</li>
     </ul>
     <div class="offcanvas__phone__num">
         <i class="fa fa-phone"></i>
