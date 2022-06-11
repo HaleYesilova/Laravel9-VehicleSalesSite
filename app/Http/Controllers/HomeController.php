@@ -9,11 +9,21 @@ class HomeController extends Controller
     //
     public function index()
     {
+        $page='home';
         $sliderdata=Car::limit(4)->get();
         $carlist1=Car::limit(6)->get();
         return view('home.index',[
+            'page'=>$page,
             'sliderdata'=>$sliderdata,
             'carlist1'=>$carlist1
+        ]);
+
+    }
+    public function car($id)
+    {
+        $data= Car::find($id);
+        return view('home.car',[
+            'data'=>$data
         ]);
 
     }
