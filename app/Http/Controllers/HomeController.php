@@ -20,8 +20,11 @@ class HomeController extends Controller
         $page='home';
         $sliderdata=Car::limit(4)->get();
         $carlist1=Car::limit(6)->get();
+        $setting = Setting::first();
+
         return view('home.index',[
             'page'=>$page,
+            'setting'=> $setting,
             'sliderdata'=>$sliderdata,
             'carlist1'=>$carlist1
         ]);
