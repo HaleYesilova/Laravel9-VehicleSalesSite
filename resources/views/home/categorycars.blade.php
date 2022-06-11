@@ -1,6 +1,6 @@
 @extends('layouts.frontbase')
 
-@section('title', $category->title . ' Cars')
+@section('title', $category->title . 'Cars')
 
 @section('content')
     <div class="breadcrumb-option set-bg" data-setbg="img/breadcrumb-bg.jpg" style="background-image: url(&quot;img/breadcrumb-bg.jpg&quot;);">
