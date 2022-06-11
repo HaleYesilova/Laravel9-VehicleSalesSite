@@ -31,21 +31,15 @@
                 <div class="col-lg-9">
                     <div class="car__details__pic">
                         <div class="car__details__pic__large">
-                            <img class="car-big-img" src="img/cars/details/cd-1.jpg" alt="">
+                            <img class="car-big-img" src="{{Storage::url($data->image)}}" alt="">
                         </div>
+                        @foreach($images as $rs)
                         <div class="car-thumbs">
                             <div class="car-thumbs-track car__thumb__slider owl-carousel">
                                 <div class="ct" data-imgbigurl="img/cars/details/cd-2.jpg"><img
-                                        src="img/cars/details/sm-1.jpg" alt=""></div>
-                                <div class="ct" data-imgbigurl="img/cars/details/cd-3.jpg"><img
-                                        src="img/cars/details/sm-2.jpg" alt=""></div>
-                                <div class="ct" data-imgbigurl="img/cars/details/cd-4.jpg"><img
-                                        src="img/cars/details/sm-3.jpg" alt=""></div>
-                                <div class="ct" data-imgbigurl="img/cars/details/cd-5.jpg"><img
-                                        src="img/cars/details/sm-4.jpg" alt=""></div>
-                                <div class="ct" data-imgbigurl="img/cars/details/cd-6.jpg"><img
-                                        src="img/cars/details/sm-5.jpg" alt=""></div>
+                                        src="{{Storage::url($rs->image)}}" alt=""></div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="car__details__tab">
@@ -70,7 +64,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
                                             <div class="car__details__tab__info__item">
-                                                <h5>General Information</h5>
+                                                <h5>{{$data->details}}</h5>
                                                 <ul>
                                                     <li><i class="fa fa-check"></i> Pellentesque lacus urna, feugiat non
                                                         consectetur nec</li>
@@ -486,7 +480,7 @@
                         <h5>Infomation</h5>
                         <ul>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Purchase</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Payemnt</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i> Payment</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Shipping</a></li>
                             <li><a href="#"><i class="fa fa-angle-right"></i> Return</a></li>
                         </ul>

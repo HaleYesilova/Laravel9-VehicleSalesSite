@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -22,10 +23,11 @@ class HomeController extends Controller
     public function car($id)
     {
         $data= Car::find($id);
+        $images = DB::table('images')->where('car_id', $id)->get();
         return view('home.car',[
-            'data'=>$data
+            'data'=>$data,
+            'images'=>$images
         ]);
-
     }
 
     public function test()
