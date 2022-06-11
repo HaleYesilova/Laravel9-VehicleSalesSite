@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('references')->nullable();
             $table->string('icon',50)->nullable();
             $table->string('status',5)->nullable()->default('False');
+            $table->string('title',100)->nullable();
             $table->timestamps();
         });
     }

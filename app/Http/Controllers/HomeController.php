@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminPanel\CategoryController;
 use App\Models\Car;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Setting;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
