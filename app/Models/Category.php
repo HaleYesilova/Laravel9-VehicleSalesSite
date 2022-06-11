@@ -13,4 +13,15 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+    #One to many Inverse
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
+
+    # one to many
+    public function children()
+    {
+        return $this->hasMany(Category::class,'parent_id');
+    }
 }

@@ -41,6 +41,7 @@ Route::get('/param/{id}/{number}',[HomeController::class,'param'])->name('param'
 Route::post('/save',[HomeController::class,'save'])->name('save');
 
 Route::get('/car/{id}',[HomeController::class,'cardetail'])->name('car');
+Route::get('categoryproducts/{id}/{slug}',[HomeController::class,'categoryproducts'])->name('categoryproducts');
 
 
 /*
